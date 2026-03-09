@@ -1,0 +1,12 @@
+{
+  "name": "aplikasi-cicd-sederhana",
+  "version": "1.0.0",
+  "description": "Aplikasi sederhana dengan CI/CD",
+  "main": "math.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
