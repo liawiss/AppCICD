@@ -1,0 +1,28 @@
+name: Jalankan Unit Test Otomatis
+
+# Perintah ini memberitahu GitHub untuk menjalankan script saat ada kode yang di-push ke branch main
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Mengambil kodemu dari repository
+    - uses: actions/checkout@v4
+
+    # Menyiapkan environment Node.js
+    - name: Siapkan Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    # Menggunakan package manager (npm) untuk menginstal library testing (Jest)
+    - name: Install dependencies menggunakan Package Manager
+      run: npm install
+
+    # Menjalankan unit test
+    - name: Jalankan Test
+      run: npm test
